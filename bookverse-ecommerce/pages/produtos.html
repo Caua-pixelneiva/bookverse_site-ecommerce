@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - BookVerse</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../images/bookverse_logo.png" alt="BookVerse" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Início</a></li>
+                        <li><a href="quem-somos.html" class="nav-link">Quem Somos</a></li>
+                        <li class="dropdown">
+                            <a href="produtos.html" class="nav-link active">Produtos</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="produtos.html?categoria=ficcao">Ficção</a></li>
+                                <li><a href="produtos.html?categoria=nao-ficcao">Não-Ficção</a></li>
+                                <li><a href="produtos.html?categoria=infantil">Infantil</a></li>
+                                <li><a href="produtos.html?categoria=academico">Acadêmico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                        <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+                        <li><a href="pedidos.html" class="nav-link">Meus Pedidos</a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <form class="search-form">
+                        <input type="text" placeholder="Buscar livros..." class="search-input">
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="products-page">
+            <div class="container">
+                <div class="products-layout">
+                    <aside class="filters-sidebar">
+                        <h3 class="filters-title">Filtrar por</h3>
+                        
+                        <div class="filter-group">
+                            <h4 class="filter-label">Categoria</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="categoria" value="ficcao">
+                                    <span>Ficção</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="categoria" value="nao-ficcao">
+                                    <span>Não-Ficção</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="categoria" value="infantil">
+                                    <span>Infantil</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="categoria" value="academico">
+                                    <span>Acadêmico</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="categoria" value="biografia">
+                                    <span>Biografia</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="categoria" value="historia">
+                                    <span>História</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4 class="filter-label">Autor</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="autor" value="autor1">
+                                    <span>Lorem Silva</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="autor" value="autor2">
+                                    <span>Ipsum Santos</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="autor" value="autor3">
+                                    <span>Dolor Costa</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4 class="filter-label">Preço</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="preco" value="0-25">
+                                    <span>Até R$ 25</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="preco" value="25-50">
+                                    <span>R$ 25 - R$ 50</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="preco" value="50-100">
+                                    <span>R$ 50 - R$ 100</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="preco" value="100+">
+                                    <span>Acima de R$ 100</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4 class="filter-label">Avaliação</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="avaliacao" value="5">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="avaliacao" value="4">
+                                    <span>⭐⭐⭐⭐ ou mais</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="avaliacao" value="3">
+                                    <span>⭐⭐⭐ ou mais</span>
+                                </label>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="products-content">
+                        <div class="products-header">
+                            <h1 class="products-title">Todos os Produtos</h1>
+                            
+                            <div class="sort-options">
+                                <label for="sort">Ordenar por:</label>
+                                <select id="sort" class="sort-select">
+                                    <option value="relevancia">Mais Relevantes</option>
+                                    <option value="preco-menor">Menor Preço</option>
+                                    <option value="preco-maior">Maior Preço</option>
+                                    <option value="lancamentos">Lançamentos</option>
+                                    <option value="mais-vendidos">Mais Vendidos</option>
+                                    <option value="melhor-avaliados">Melhor Avaliados</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="products-grid">
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📚</div>
+                                </div>
+                                <h3 class="book-title">Lorem Ipsum Dolor</h3>
+                                <p class="book-author">Autor Lorem</p>
+                                <div class="book-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 29,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📖</div>
+                                </div>
+                                <h3 class="book-title">Consectetur Adipiscing</h3>
+                                <p class="book-author">Ipsum Silva</p>
+                                <div class="book-rating">⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 34,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📘</div>
+                                </div>
+                                <h3 class="book-title">Elit Sed Do Eiusmod</h3>
+                                <p class="book-author">Dolor Santos</p>
+                                <div class="book-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 39,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📗</div>
+                                </div>
+                                <h3 class="book-title">Tempor Incididunt</h3>
+                                <p class="book-author">Ut Oliveira</p>
+                                <div class="book-rating">⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 24,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📙</div>
+                                </div>
+                                <h3 class="book-title">Labore Et Dolore</h3>
+                                <p class="book-author">Magna Costa</p>
+                                <div class="book-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 44,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📕</div>
+                                </div>
+                                <h3 class="book-title">Aliqua Ut Enim</h3>
+                                <p class="book-author">Ad Lima</p>
+                                <div class="book-rating">⭐⭐⭐</div>
+                                <p class="book-price">R$ 19,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📔</div>
+                                </div>
+                                <h3 class="book-title">Minim Veniam Quis</h3>
+                                <p class="book-author">Nostrud Pereira</p>
+                                <div class="book-rating">⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 32,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📓</div>
+                                </div>
+                                <h3 class="book-title">Exercitation Ullamco</h3>
+                                <p class="book-author">Laboris Nisi</p>
+                                <div class="book-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 37,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+
+                            <div class="book-card">
+                                <div class="book-image">
+                                    <div class="placeholder-image">📒</div>
+                                </div>
+                                <h3 class="book-title">Aliquip Ex Ea</h3>
+                                <p class="book-author">Commodo Consequat</p>
+                                <div class="book-rating">⭐⭐⭐⭐</div>
+                                <p class="book-price">R$ 28,90</p>
+                                <a href="produto.html" class="btn btn-secondary">Ver Detalhes</a>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled>« Anterior</button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn">5</button>
+                            <button class="pagination-btn">Próximo »</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="quem-somos.html">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="contato.html">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p>📍 Rua Lorem Ipsum, 123</p>
+                        <p>📞 (11) 1234-5678</p>
+                        <p>✉️ contato@bookverse.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookVerse. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
