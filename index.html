@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse - Sua Livraria Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/bookverse_logo.png" alt="BookVerse" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Início</a></li>
+                        <li><a href="pages/quem-somos.html" class="nav-link">Quem Somos</a></li>
+                        <li class="dropdown">
+                            <a href="pages/produtos.html" class="nav-link">Produtos</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="pages/produtos.html?categoria=ficcao">Ficção</a></li>
+                                <li><a href="pages/produtos.html?categoria=nao-ficcao">Não-Ficção</a></li>
+                                <li><a href="pages/produtos.html?categoria=infantil">Infantil</a></li>
+                                <li><a href="pages/produtos.html?categoria=academico">Acadêmico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pages/contato.html" class="nav-link">Contato</a></li>
+                        <li><a href="pages/cadastro.html" class="nav-link">Cadastro</a></li>
+                        <li><a href="pages/pedidos.html" class="nav-link">Meus Pedidos</a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <form class="search-form">
+                        <input type="text" placeholder="Buscar livros..." class="search-input">
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Banner Principal -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Descubra seu próximo livro favorito!</h1>
+                    <p class="hero-subtitle">Milhares de títulos, entrega rápida e os melhores preços.</p>
+                    <a href="pages/produtos.html" class="btn btn-primary">Explorar Livros</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Livros em Destaque -->
+        <section class="featured-books">
+            <div class="container">
+                <h2 class="section-title">Nossos Destaques</h2>
+                <div class="books-grid">
+                    <div class="book-card">
+                        <div class="book-image">
+                            <div class="placeholder-image">📚</div>
+                        </div>
+                        <h3 class="book-title">Lorem Ipsum Dolor</h3>
+                        <p class="book-author">Autor Exemplo</p>
+                        <p class="book-price">R$ 29,90</p>
+                        <button class="btn btn-secondary">Comprar</button>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image">
+                            <div class="placeholder-image">📖</div>
+                        </div>
+                        <h3 class="book-title">Sit Amet Consectetur</h3>
+                        <p class="book-author">Escritor Silva</p>
+                        <p class="book-price">R$ 34,90</p>
+                        <button class="btn btn-secondary">Comprar</button>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image">
+                            <div class="placeholder-image">📘</div>
+                        </div>
+                        <h3 class="book-title">Adipiscing Elit</h3>
+                        <p class="book-author">Maria Santos</p>
+                        <p class="book-price">R$ 39,90</p>
+                        <button class="btn btn-secondary">Comprar</button>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image">
+                            <div class="placeholder-image">📗</div>
+                        </div>
+                        <h3 class="book-title">Sed Do Eiusmod</h3>
+                        <p class="book-author">João Oliveira</p>
+                        <p class="book-price">R$ 24,90</p>
+                        <button class="btn btn-secondary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorias Populares -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Navegue por Categoria</h2>
+                <div class="categories-grid">
+                    <a href="pages/produtos.html?categoria=ficcao" class="category-card">
+                        <div class="category-icon">📚</div>
+                        <h3 class="category-name">Ficção</h3>
+                    </a>
+                    <a href="pages/produtos.html?categoria=nao-ficcao" class="category-card">
+                        <div class="category-icon">📖</div>
+                        <h3 class="category-name">Não-Ficção</h3>
+                    </a>
+                    <a href="pages/produtos.html?categoria=infantil" class="category-card">
+                        <div class="category-icon">🧸</div>
+                        <h3 class="category-name">Infantil</h3>
+                    </a>
+                    <a href="pages/produtos.html?categoria=academico" class="category-card">
+                        <div class="category-icon">🎓</div>
+                        <h3 class="category-name">Acadêmico</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Receba Nossas Novidades</h2>
+                    <p class="newsletter-text">Fique por dentro dos lançamentos e promoções especiais!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" class="newsletter-input">
+                        <button type="submit" class="btn btn-primary">Assinar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/quem-somos.html">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="pages/contato.html">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p>📍 Rua Lorem Ipsum, 123</p>
+                        <p>📞 (11) 1234-5678</p>
+                        <p>✉️ contato@bookverse.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookVerse. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos - BookVerse</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../images/bookverse_logo.png" alt="BookVerse" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Início</a></li>
+                        <li><a href="quem-somos.html" class="nav-link">Quem Somos</a></li>
+                        <li class="dropdown">
+                            <a href="produtos.html" class="nav-link">Produtos</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="produtos.html?categoria=ficcao">Ficção</a></li>
+                                <li><a href="produtos.html?categoria=nao-ficcao">Não-Ficção</a></li>
+                                <li><a href="produtos.html?categoria=infantil">Infantil</a></li>
+                                <li><a href="produtos.html?categoria=academico">Acadêmico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                        <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+                        <li><a href="pedidos.html" class="nav-link active">Meus Pedidos</a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <form class="search-form">
+                        <input type="text" placeholder="Buscar livros..." class="search-input">
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="orders-page">
+            <div class="container">
+                <h1 class="page-title">Meus Pedidos</h1>
+                
+                <div class="orders-tabs">
+                    <button class="tab-btn active" data-tab="todos">Todos os Pedidos</button>
+                    <button class="tab-btn" data-tab="carrinho">Carrinho Atual</button>
+                    <button class="tab-btn" data-tab="andamento">Em Andamento</button>
+                    <button class="tab-btn" data-tab="entregues">Entregues</button>
+                </div>
+
+                <!-- Todos os Pedidos -->
+                <div class="tab-content active" id="todos">
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3 class="order-id">Pedido #12345</h3>
+                                    <p class="order-date">Data: 15/01/2025</p>
+                                    <span class="order-status status-entregue">Entregue</span>
+                                </div>
+                                <div class="order-total">
+                                    <span class="total-label">Total:</span>
+                                    <span class="total-value">R$ 89,70</span>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-product">
+                                    <div class="product-image">
+                                        <div class="placeholder-image small">📚</div>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Lorem Ipsum Dolor</h4>
+                                        <p>Autor Lorem Silva</p>
+                                        <p>Qtd: 2 | R$ 29,90 cada</p>
+                                    </div>
+                                </div>
+                                <div class="order-product">
+                                    <div class="product-image">
+                                        <div class="placeholder-image small">📖</div>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Consectetur Adipiscing</h4>
+                                        <p>Ipsum Silva</p>
+                                        <p>Qtd: 1 | R$ 29,90</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-secondary">Ver Detalhes</button>
+                                <button class="btn btn-outline">Comprar Novamente</button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3 class="order-id">Pedido #12344</h3>
+                                    <p class="order-date">Data: 10/01/2025</p>
+                                    <span class="order-status status-transporte">Em Transporte</span>
+                                </div>
+                                <div class="order-total">
+                                    <span class="total-label">Total:</span>
+                                    <span class="total-value">R$ 64,80</span>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-product">
+                                    <div class="product-image">
+                                        <div class="placeholder-image small">📘</div>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Elit Sed Do Eiusmod</h4>
+                                        <p>Dolor Santos</p>
+                                        <p>Qtd: 1 | R$ 39,90</p>
+                                    </div>
+                                </div>
+                                <div class="order-product">
+                                    <div class="product-image">
+                                        <div class="placeholder-image small">📗</div>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Tempor Incididunt</h4>
+                                        <p>Ut Oliveira</p>
+                                        <p>Qtd: 1 | R$ 24,90</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-secondary">Rastrear Pedido</button>
+                                <button class="btn btn-outline">Ver Detalhes</button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3 class="order-id">Pedido #12343</h3>
+                                    <p class="order-date">Data: 05/01/2025</p>
+                                    <span class="order-status status-preparacao">Em Preparação</span>
+                                </div>
+                                <div class="order-total">
+                                    <span class="total-label">Total:</span>
+                                    <span class="total-value">R$ 44,90</span>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-product">
+                                    <div class="product-image">
+                                        <div class="placeholder-image small">📙</div>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Labore Et Dolore</h4>
+                                        <p>Magna Costa</p>
+                                        <p>Qtd: 1 | R$ 44,90</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-secondary">Ver Detalhes</button>
+                                <button class="btn btn-danger">Cancelar Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carrinho Atual -->
+                <div class="tab-content" id="carrinho">
+                    <div class="cart-section">
+                        <h2>Carrinho de Compras</h2>
+                        
+                        <div class="cart-items">
+                            <div class="cart-item">
+                                <div class="item-image">
+                                    <div class="placeholder-image small">📚</div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                                    <p>Autor Lorem Silva</p>
+                                    <p class="item-price">R$ 29,90</p>
+                                </div>
+                                <div class="item-quantity">
+                                    <label for="qty1">Quantidade:</label>
+                                    <input type="number" id="qty1" value="1" min="1" max="10" class="quantity-input">
+                                </div>
+                                <div class="item-total">
+                                    <span>R$ 29,90</span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn btn-outline btn-small">Remover</button>
+                                </div>
+                            </div>
+
+                            <div class="cart-item">
+                                <div class="item-image">
+                                    <div class="placeholder-image small">📖</div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Consectetur Adipiscing Elit</h3>
+                                    <p>Ipsum Silva</p>
+                                    <p class="item-price">R$ 34,90</p>
+                                </div>
+                                <div class="item-quantity">
+                                    <label for="qty2">Quantidade:</label>
+                                    <input type="number" id="qty2" value="2" min="1" max="10" class="quantity-input">
+                                </div>
+                                <div class="item-total">
+                                    <span>R$ 69,80</span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn btn-outline btn-small">Remover</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span>R$ 99,70</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Frete:</span>
+                                <span class="free-shipping">Grátis</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span>R$ 99,70</span>
+                            </div>
+                            
+                            <div class="coupon-section">
+                                <label for="coupon">Cupom de Desconto:</label>
+                                <div class="coupon-input-group">
+                                    <input type="text" id="coupon" placeholder="Digite o código do cupom" class="coupon-input">
+                                    <button class="btn btn-outline">Aplicar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="cart-actions">
+                                <button class="btn btn-outline">Continuar Comprando</button>
+                                <button class="btn btn-primary btn-large">Finalizar Compra</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Em Andamento -->
+                <div class="tab-content" id="andamento">
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3 class="order-id">Pedido #12344</h3>
+                                    <p class="order-date">Data: 10/01/2025</p>
+                                    <span class="order-status status-transporte">Em Transporte</span>
+                                </div>
+                                <div class="order-total">
+                                    <span class="total-label">Total:</span>
+                                    <span class="total-value">R$ 64,80</span>
+                                </div>
+                            </div>
+                            <div class="tracking-info">
+                                <h4>Status do Pedido:</h4>
+                                <div class="tracking-steps">
+                                    <div class="step completed">
+                                        <span class="step-icon">✅</span>
+                                        <span class="step-text">Pedido Confirmado</span>
+                                    </div>
+                                    <div class="step completed">
+                                        <span class="step-icon">✅</span>
+                                        <span class="step-text">Em Preparação</span>
+                                    </div>
+                                    <div class="step active">
+                                        <span class="step-icon">🚚</span>
+                                        <span class="step-text">Em Transporte</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-icon">📦</span>
+                                        <span class="step-text">Entregue</span>
+                                    </div>
+                                </div>
+                                <p class="tracking-estimate">Previsão de entrega: 20/01/2025</p>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3 class="order-id">Pedido #12343</h3>
+                                    <p class="order-date">Data: 05/01/2025</p>
+                                    <span class="order-status status-preparacao">Em Preparação</span>
+                                </div>
+                                <div class="order-total">
+                                    <span class="total-label">Total:</span>
+                                    <span class="total-value">R$ 44,90</span>
+                                </div>
+                            </div>
+                            <div class="tracking-info">
+                                <h4>Status do Pedido:</h4>
+                                <div class="tracking-steps">
+                                    <div class="step completed">
+                                        <span class="step-icon">✅</span>
+                                        <span class="step-text">Pedido Confirmado</span>
+                                    </div>
+                                    <div class="step active">
+                                        <span class="step-icon">📋</span>
+                                        <span class="step-text">Em Preparação</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-icon">🚚</span>
+                                        <span class="step-text">Em Transporte</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-icon">📦</span>
+                                        <span class="step-text">Entregue</span>
+                                    </div>
+                                </div>
+                                <p class="tracking-estimate">Previsão de entrega: 25/01/2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entregues -->
+                <div class="tab-content" id="entregues">
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3 class="order-id">Pedido #12345</h3>
+                                    <p class="order-date">Data: 15/01/2025</p>
+                                    <span class="order-status status-entregue">Entregue</span>
+                                </div>
+                                <div class="order-total">
+                                    <span class="total-label">Total:</span>
+                                    <span class="total-value">R$ 89,70</span>
+                                </div>
+                            </div>
+                            <div class="delivery-info">
+                                <p><strong>Entregue em:</strong> 18/01/2025 às 14:30</p>
+                                <p><strong>Recebido por:</strong> Lorem Silva</p>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-secondary">Avaliar Produtos</button>
+                                <button class="btn btn-outline">Comprar Novamente</button>
+                                <button class="btn btn-outline">Solicitar Devolução</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="quem-somos.html">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="contato.html">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="contact-info">
+                        <p>📍 Rua Lorem Ipsum, 123</p>
+                        <p>📞 (11) 1234-5678</p>
+                        <p>✉️ contato@bookverse.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookVerse. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
